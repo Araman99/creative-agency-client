@@ -8,9 +8,9 @@ import ListAltOutlinedIcon from '@material-ui/icons/ListAltOutlined';
 const ServiceList = () => {
     const [user] = useContext(UserContext);
     const [order, setOrder] = useState([]);
-
+    
     useEffect(() =>{
-        fetch(`http://localhost:5000/services?email=${user.email}`)
+        fetch(`https://lit-brushlands-28713.herokuapp.com?email=${user.email}`)
         .then(res => res.json())
         .then(data => setOrder(data))
     }, []) 
